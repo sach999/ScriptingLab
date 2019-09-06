@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	
+	<style>
+		
+		.container{
+			width: 50%;
+			height: 50%;
+			margin: auto auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			border: 2px solid black;
+			padding: 10px 10px;
+			justify-content: space around;
+			border-radius: 5%;
+		}
+		
+		input, button{
+			padding: 8px;
+			margin: 10px 20px;
+		}	
+		
+		.btns{
+			display: flex;
+			flex-direction: row;	
+		}
+		
+	</style>
+	
+	<title> Simple Calci </title>
+</head>
+
+<body>
+
+	<div class="container">
+		<input type="text" placeholder="first number" id="first" />
+		<input type="text" placeholder="first number" id="second" />
+		<div class="btns">
+			<button onClick="multiply()">Multiply</button>
+			<button onClick="add()">ADD</button>
+		</div>
+		
+		
+		<p> Result : <span id="result"></span></p>
+	</div>
+
+
+
+
+	<script type = "text/javascript">
+		
+		
+		function multiply(){
+			
+			num1 = document.getElementById("first").value;
+			num2 = document.getElementById("second").value;			
+			
+			if(num1 && num2 && num1 > 0 && num2 > 0){
+				document.getElementById("result").innerText = num1 * num2 ;
+			}
+			else{
+				document.getElementById("result").innerHTML = "Please enter a valid positive number" ;	
+			}	
+		}
+	
+		function add(){
+	
+			num1 = parseInt(document.getElementById("first").value);
+			num2 = parseInt(document.getElementById("second").value);			
+		
+			if(num1 && num2 && num1 > 0 && num2 > 0){
+				document.getElementById("result").innerText = num1 + num2 ;
+			}
+			else{
+				document.getElementById("result").innerText = "Please enter a valid positive number" ;	
+			}
+		}
+		
+	</script>
+
+
+</body>
+</html>
