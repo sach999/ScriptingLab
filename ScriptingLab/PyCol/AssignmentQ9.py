@@ -14,7 +14,7 @@ class Student:
         print("AGE: ", self.age)
         i = 1
         for mark in self.marks:
-            print("Mark ", i, " = ", mark)
+            print("Mark ", i, ") = ", mark)
             i += 1
 
 
