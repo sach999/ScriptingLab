@@ -62,7 +62,7 @@
 
 ![](images/img3.PNG)
 
-* Data Visualization Program on StudentPerformance DataSet
+* Data Visualization Program on BlackFriday DataSet
 
 ![](images/img4.PNG)
 
