@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>INDEX</title>
+</head>
+
+<body>
+
+    <h4>{{msg}}</h4>
+
+    <form action="{{url_for('index')}}" method="POST">
+
+        <input type="text" name="item" placeholder="Enter item">
+        <input type="number" name="cost" placeholder="Enter cost">
+
+        <br>
+
+        <input type="text" name="item1" placeholder="Enter second item">
+        <input type="number" name="cost1" placeholder="Enter cost">
+
+        <br>
+
+        <input type="submit" name="bill">
+
+    </form>
+
+</body>
+
+</html>

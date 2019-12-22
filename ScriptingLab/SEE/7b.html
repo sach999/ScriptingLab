@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        * {
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .container {
+            width: 50%;
+            height: 80%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .display {
+            display: block;
+        }
+
+        .hidden,
+        .name {
+            border: 1px solid black;
+        }
+    </style>
+
+    <title>Cars</title>
+</head>
+
+<body>
+
+
+    <div class="container">
+
+    </div>
+
+    <script>
+
+        var cars = [{
+            "model": "v2",
+            "name": "corolla",
+            "price": "2000000",
+            "year": "2018"
+        }, {
+            "model": "v1",
+            "name": "CyberTruck",
+            "price": "3500000",
+            "year": "2019"
+        }, {
+            "model": "v3",
+            "name": "Maruti800",
+            "price": "100000",
+            "year": "2009"
+        }]
+
+        var cont = document.querySelector(".container");
+
+        for (var i = 0; i < cars.length; i++) {
+
+            let name = document.createElement("div");
+            name.setAttribute("class", "name");
+            name.setAttribute("onmouseover", "disp(this)");
+            name.textContent = `${cars[i].name}`;
+            cont.appendChild(name);
+
+            let details = document.createElement("div");
+            details.setAttribute("class", `hidden ${cars[i].name}`);
+            details.textContent = `Model: ${cars[i].model}\tPrice: ${cars[i].price}\tYear: ${cars[i].year}`;
+            cont.appendChild(details);
+
+        }
+
+        function disp(car) {
+
+            var listItem = document.querySelector(`.${car.textContent}`);
+            listItem.classList.toggle("display");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

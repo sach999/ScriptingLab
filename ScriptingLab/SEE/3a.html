@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>book</title>
+</head>
+
+<body>
+
+    <script>
+
+        var authors = [{
+            "name": "abc",
+            "country": "India",
+            "title": "ABC",
+            "publication": "penguin"
+        },
+        {
+            "name": "def",
+            "country": "SriLAnka",
+            "title": "DEF",
+            "publication": "qwerrt"
+        },
+        {
+            "name": "def",
+            "country": "SriLAnka",
+            "title": "DEF",
+            "publication": "qwerrt"
+        },
+        {
+            "name": "def",
+            "country": "SriLAnka",
+            "title": "DEF",
+            "publication": "qwerrt"
+        }];
+
+
+
+        for (var i = 0; i < 2; i++) {
+
+            document.write("<table border=1>");
+            document.write("<tr><th>Name</th><td>" + authors[i].name + "</td></tr>");
+            document.write("<tr><th>Country</th><td>" + authors[i].country + "</td></tr>");
+            document.write("<tr><th>Title</th><td>" + authors[i].title + "</td></tr>");
+            document.write("<tr><th>Publication</th><td>" + authors[i].publication + "</td></tr>");
+            document.write("</table>")
+            document.write("<br><br>");
+
+        }
+
+        for (var i = 2; i < 4; i++) {
+
+            document.write("<p> NAme: " + authors[i].name + "Country: " + authors[i].country + "Title: " + authors[i].title + "pub: " + authors[i].publication + "</p>");
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

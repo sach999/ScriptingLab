@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Items</title>
+</head>
+
+<body>
+
+    <input type="text" class="item" placeholder="Enter item name">
+    <input type="number" class="price" placeholder="Enter price">
+    <input type="number" class="quantity" placeholder="Enter quantity">
+    <button onclick="calc()">SUBMIT</button>
+    <button onclick="paid()">PAY</button>
+    <p id="res"></p>
+    <p id="total"></p>
+
+    <script>
+
+        var total = 0;
+        var price = 0;
+        function calc() {
+            var i = document.querySelector(".item").value;
+            var p = document.querySelector(".price").value;
+            var q = document.querySelector(".quantity").value;
+            price = p * q;
+            total += price;
+            document.querySelector("#res").innerHTML = `Total for ${i} = ${price}`;
+            document.querySelector("#total").innerHTML = total;
+        }
+
+        function paid() {
+            if (document.querySelector(".price").value == "") {
+                alert("Enter item");
+            }
+            else {
+                alert("Paid");
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

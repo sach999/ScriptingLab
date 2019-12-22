@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+</head>
+
+<body>
+
+    <h1>Register!!</h1>
+    <h2>{{msg}}</h2>
+    <form action="{{url_for('index')}}" method="POST">
+
+        <input type="text" name="dob" placeholder="Enter dob">
+        <input type="text" name="usn" placeholder="Enter usn">
+        <br><br>
+        <input type="number" name="marks1" placeholder="Enter 1st mark">
+        <input type="number" name="marks2" placeholder="Enter 2nd mark">
+        <input type="number" name="marks3" placeholder="Enter 3rd mark">
+        <br>
+        <input type="submit" name="Register here">
+
+    </form>
+
+</body>
+
+</html>
